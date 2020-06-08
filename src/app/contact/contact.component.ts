@@ -12,8 +12,8 @@ export class ContactComponent implements OnInit {
   constructor() { 
 
     this.contactForm = new FormGroup({
-      'cname': new FormControl('', Validators.required),
-      'cemail': new FormControl('', Validators.required),
+      'cname': new FormControl('', [Validators.required,Validators.minLength(4)]),
+      'cemail': new FormControl('', [Validators.required,Validators.email]),
       'csubject': new FormControl('', Validators.required),
       'cmessage': new FormControl('', Validators.required)
     })

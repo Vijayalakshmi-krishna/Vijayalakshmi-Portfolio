@@ -6,7 +6,7 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+          <p><strong>Please fill out the quick form and we will be in touch with lightening speed</strong></p>
         </div>
 
         <!-- <div>
@@ -14,7 +14,6 @@
         </div> -->
 
         <div class="row mt-5">
-
           <div class="col-lg-4">
             <div class="info">
               <div class="address">
@@ -40,32 +39,32 @@
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-
+            
             <form [formGroup]="contactForm" (submit)="sendData()">
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" formControlName="cname"/>
-                  <div class="validate"></div>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" formControlName="cname"/>
+                  <span *ngIf="!contactForm.get('cname').valid && (contactForm.get('cname').touched || contactForm.get('cname').dirty)" [ngClass]="{invalidError:(!contactForm.get('cname').valid) && (contactForm.get('cname').touched || contactForm.get('cname').dirty)}">Name should be 4 chars</span>
                 </div>
                 <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" formControlName="cemail"/>
-                  <div class="validate"></div>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" formControlName="cemail"/>
+                  <span *ngIf="(!contactForm.get('cemail').valid && (contactForm.get('cemail').touched || contactForm.get('cemail').dirty))" [ngClass]="{invalidError:(!contactForm.get('cemail').valid) && (contactForm.get('cname').touched || contactForm.get('cemail').dirty)}">Enter a valid Email</span>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" formControlName="csubject"/>
-                <div class="validate"></div>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" formControlName="csubject"/>
+                <span *ngIf="(!contactForm.get('csubject').valid && (contactForm.get('csubject').touched || contactForm.get('csubject').dirty))" [ngClass]="{invalidError:(!contactForm.get('csubject').valid) && (contactForm.get('csubject').touched || contactForm.get('csubject').dirty)}">Subject Required</span>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" formControlName="cmessage"></textarea>
-                <div class="validate"></div>
+                <textarea class="form-control" name="message" placeholder="Message" formControlName="cmessage"></textarea>
+                <span *ngIf="(!contactForm.get('cmessage').valid && (contactForm.get('cmessage').touched || contactForm.get('cmessage').dirty))" [ngClass]="{invalidError:(!contactForm.get('cmessage').valid) && (contactForm.get('cmessage').touched || contactForm.get('cmessage').dirty)}">Message Required</span>
               </div>
               <div class="mb-3">
                 <!-- <div class="loading">Loading</div>
                 <div class="error-message"></div> -->
                 <div *ngIf="isSubmit" class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
+              <div class="text-center"><button id="submitButton" type="submit">Send Message</button></div>
             </form>
 
           </div>

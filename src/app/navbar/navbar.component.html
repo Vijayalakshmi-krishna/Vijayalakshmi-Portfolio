@@ -5,19 +5,52 @@
     <!-- Uncomment below if you prefer to use an image logo -->
     <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-    <nav class="nav-menu d-none d-lg-block">
+    <!-- <nav class="nav-menu d-none d-lg-block">
+     
       <ul>
-        <li><a routerLink="home">Home</a></li>
+        <li class="active"><a routerLink="home">Home</a></li>
         <li><a routerLink="about">About</a></li>
         <li><a routerLink="portfolio">Portfolio</a></li>
         <li><a routerLink="resume">Resume</a></li>
         <li><a routerLink="contact">Contact</a></li>
       </ul>
-    </nav><!-- .nav-menu -->
+    </nav> -->
 
-    <div class="header-social-links">
-      <!-- <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" routerLink=''>Vijayalakshmi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" routerLink='home'>Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink='about'>About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink='portfolio'>Portfolio</a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" routerLink='resume'>Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink='contact'>Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-social-links">      
+        <!-- <a href="www.facebook.com" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
         <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a> -->
     </div>
