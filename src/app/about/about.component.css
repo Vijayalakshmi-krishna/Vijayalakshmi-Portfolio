@@ -5,5 +5,9 @@ span{
     margin:0 auto;
     padding: 5px 5px
     }
-
-    
+.myimage
+{
+    height: 250px;
+    width: 190px;
+    margin-left: 118px;
+}

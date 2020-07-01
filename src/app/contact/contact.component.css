@@ -1,9 +1,9 @@
-#submitButton
+.submitButton
 {
-    background-color:rgb(0, 255, 255);
-    border-radius: 12px;
-    font-style: oblique;
+    background-color:rgb(0, 255, 179);
+    border-radius: 16px;   
     font-weight: bolder;
+    color: black;
 }
 
 .invalidError
